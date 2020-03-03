@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: install-build-pkgs
-      run: tools/install-build-pkgs
+      run: sudo tools/install-build-pkgs
     - name: make
       run: make deb    
     - name: gpkg
