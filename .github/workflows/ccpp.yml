@@ -12,6 +12,6 @@ jobs:
     - name: install-build-pkgs
       run: sudo tools/install-build-pkgs
     - name: make
-      run: make deb    
+      run: sudo make deb    
     - name: gpkg
-      run: dpkg -i ../mergerfs_version_arch.deb
+      run: sudo dpkg -i ../mergerfs_version_arch.deb
