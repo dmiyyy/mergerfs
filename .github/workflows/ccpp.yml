@@ -9,11 +9,9 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
-    - name: configure
-      run: ./configure
+    - name: install-build-pkgs
+      run: tools/install-build-pkgs
     - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+      run: make deb    
+    - name: gpkg
+      run: dpkg -i ../mergerfs_version_arch.deb
